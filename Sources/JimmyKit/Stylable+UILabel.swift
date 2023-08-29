@@ -9,25 +9,25 @@ import UIKit.UILabel
 
 extension Stylable where Self: UILabel {
     @discardableResult
-    func text(_ text: String?) -> Self {
+    public func text(_ text: String?) -> Self {
         self.text = text
         return self
     }
     
     @discardableResult
-    func font(_ font: UIFont) -> Self {
+    public func font(_ font: UIFont) -> Self {
         self.font = font
         return self
     }
     
     @discardableResult
-    func textAlignment(_ alignment: NSTextAlignment) -> Self {
+    public func textAlignment(_ alignment: NSTextAlignment) -> Self {
         self.textAlignment = alignment
         return self
     }
     
     @discardableResult
-    func textColor(_ color: UIColor) -> Self {
+    public func textColor(_ color: UIColor) -> Self {
         self.textColor = color
         return self
     }
