@@ -213,3 +213,7 @@ Each method returns the instance of the object with the specified property updat
 - `attributedPlaceholder(_:color:font:)`: 텍스트 필드의 속성 플레이스홀더 텍스트를 설정합니다.
 
 각 메서드는 지정된 속성이 업데이트된 객체의 인스턴스를 반환합니다.
+
+### License
+
+Then is under MIT license. See the [License](https://github.com/Jimmy-Jung/JimmyKit/blob/main/LICENSE). file for more info.
