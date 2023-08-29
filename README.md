@@ -61,11 +61,11 @@ let textField = UITextField()
 ```
 
 ## Create Code Snippet
-<img width="470" alt="1" src="https://github.com/Jimmy-Jung/SwiftyComponent/assets/115251866/ebb5f302-ec7f-4d0c-a4ad-2a544c6b95d5">
+<img width="470" alt="1" src="https://github.com/Jimmy-Jung/JimmyKit/assets/115251866/6bfac3bf-25c5-4de4-8332-7f296af74ab0">
 
 <br/> 
+<img width="470" alt="2" src="https://github.com/Jimmy-Jung/JimmyKit/assets/115251866/e249e7e0-0aee-4bba-bd3b-0f1d8bec1956">
 
-<img width="470" alt="스크린샷 2023-08-28 오전 10 15 49" src="https://github.com/Jimmy-Jung/SwiftyComponent/assets/115251866/d3c76f5d-15c7-4477-a47a-7989a9d48ca6">
 
 <br/> 
 <br/> 
