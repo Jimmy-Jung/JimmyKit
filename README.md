@@ -4,6 +4,12 @@
 
 ✨ JimmyKit은 Swifty하게 UIKit 컴포넌트를 만들 수 있는 툴입니다.
 
+## Installation
+### Swift Package Manager
+
+Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+
 ## Examples of use(사용 예시)
 
 ### ButtonBuilder
