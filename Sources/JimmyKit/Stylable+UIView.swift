@@ -7,7 +7,7 @@
 
 import UIKit.UIView
 
-protocol Stylable {}
+public protocol Stylable {}
 extension UIView: Stylable {}
 
 extension Stylable where Self: UIView {
