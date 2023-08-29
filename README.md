@@ -6,6 +6,9 @@
 
 ## Installation
 ### Swift Package Manager
+```
+https://github.com/Jimmy-Jung/JimmyKit.git
+```
 
 Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
