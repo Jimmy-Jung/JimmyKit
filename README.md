@@ -44,7 +44,7 @@ lazy var button1: UIButton = {
     config.title = "Plain Button"
     config.subtitle = "SubTitle"
     config.buttonSize = .medium
-        .image(UIImage(systemName: "swift"))
+    config.image = UIImage(systemName: "swift")
     button.configuration = config
     button.addTarget(self, action: #selector(button1Tapped), for: .touchUpInside)
     return button
