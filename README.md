@@ -4,29 +4,42 @@
 
 ✨ JimmyKit은 Swifty하게 UIKit 컴포넌트를 만들 수 있는 툴입니다.
 
+<br/>
+
 # Installation
 ## Swift Package Manager
 ```
 https://github.com/Jimmy-Jung/JimmyKit.git
 ```
 
-Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+Swift Package Manager is a tool for managing the distribution of Swift code. 
+
+It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+<br/>
 
 Swift Package Manager은 Swift 코드의 배포를 관리하기 위해 설계된 도구입니다. 
+
 Swift 빌드 시스템과 밀접하게 통합되어 있어 의존성을 자동으로 다운로드, 컴파일 및 링크하는 것이 쉽습니다.
 
 CocoaPod도 배워서 조만간 배포해 보겠습니다...
 
+<br/>
 
 # Examples of use(사용 예시)
 
 ## ButtonBuilder
 
 In UIKit, buttons are typically created using the following method:
+
 ButtonBuilder must return a UIButton by calling 
+
 the makeButton() since its return type is ButtonBuilder. 
 
+<br/>
+
 UIKit에서는 일반적으로 다음과 같은 방법으로 버튼을 생성합니다. (토나옵니다 진짜)
+
 ButtinBuilder는 반환타입이 ButtonBuilder이기 때문에 꼭 makeButton()
 메서드를 호출해 UIButton을 반환해줘야 합니다.
 
@@ -67,6 +80,8 @@ let button1: UIButton = ButtonBuilder(.plain)
 
 ```
 
+<br/>
+
 ## Reasons for designing it this way(이렇게 설계한 이유)
 
 ✨ This design choice was made to prevent confusion 
@@ -84,6 +99,7 @@ However, if you don't like this approach, UIButton also provides chaining method
 하지만 이 방식이 마음에 들지 않는다면 UIButton 체이닝 메서드도 제공합니다.
 
 
+<br/>
 
 ### UIView Components
 
@@ -122,6 +138,8 @@ let scrollView = UIScrollView()
 
 ```
 
+<br/>
+
 ## Transition(화면전환)
 
 Screen transitions in storyboards can be summarized in just one line.
@@ -156,6 +174,8 @@ transition(viewController: MyViewController, style: .presentNavigation) {vc in
 }
 
 ```
+
+<br/>
 
 ## Identifier
 
@@ -202,7 +222,7 @@ let cell = collectionView.dequeueReusableCell(
 
 ```
 
-
+<br/>
 
 ## Create Code Snippet
 
@@ -227,6 +247,8 @@ lazy var <#Button#>: UIButton = ButtonBuilder(<#T##style: ButtonBuilder.ButtonSt
         .addAction { [unowned self] in <#Code#> }
         .makeButton()
 ```
+<br/>
+
 # ButtonBuilder
 
 ## Available Button Styles(사용 가능한 버튼 스타일)
@@ -239,6 +261,8 @@ lazy var <#Button#>: UIButton = ButtonBuilder(<#T##style: ButtonBuilder.ButtonSt
 - bordered
 - borderedTinted
 - borderedProminent
+
+  <br/>
 
 ## Available Configurations
 
@@ -263,6 +287,8 @@ lazy var <#Button#>: UIButton = ButtonBuilder(<#T##style: ButtonBuilder.ButtonSt
 - `showsActivityIndicator(_ bool:)`: shows or hides the button's activity indicator
 - `addAction(_ action:)`: adds an action to the button
 - `addConfigurationUpdateHandler(_ action:)`: adds a configuration update handler to the button
+
+<br/>
 
 ## **사용 가능한 설정**
 
@@ -289,6 +315,8 @@ lazy var <#Button#>: UIButton = ButtonBuilder(<#T##style: ButtonBuilder.ButtonSt
 - `addConfigurationUpdateHandler(_ action:)`: 버튼에 구성 업데이트 핸들러를 추가합니다.
 
 위 코드는 SwiftUI 스타일로 버튼을 쉽게 만들어주는 툴입니다. 이 도구를 사용하여 다양한 스타일과 설정을 사용하여 쉽게 사용자 정의 버튼을 만들 수 있습니다.
+
+<br/>
 
 # UIView Components
 
@@ -327,6 +355,8 @@ lazy var <#Button#>: UIButton = ButtonBuilder(<#T##style: ButtonBuilder.ButtonSt
 
 Each method returns the instance of the object with the specified property updated.
 
+<br/>
+
 ## **사용 가능한 설정**
 
 ### UIView
@@ -362,6 +392,8 @@ Each method returns the instance of the object with the specified property updat
 - `attributedPlaceholder(_:color:font:)`: 텍스트 필드의 속성 플레이스홀더 텍스트를 설정합니다.
 
 각 메서드는 지정된 속성이 업데이트된 객체의 인스턴스를 반환합니다.
+
+<br/>
 
 ### License
 
