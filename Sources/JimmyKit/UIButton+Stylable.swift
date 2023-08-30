@@ -1,59 +1,20 @@
 //
-//  ButtonBuilder.swift
-//  JimmyKit
+//  UIButton+Stylable.swift
+//  
 //
-//  Created by 정준영 on 2023/08/28.
+//  Created by 정준영 on 2023/08/30.
 //
 
-import UIKit
+import UIKit.UIButton
 
 @available(iOS 15.0, *)
-public struct ButtonBuilder {
-    private var button = UIButton()
+extension Stylable where Self: UIButton {
     
-    public enum ButtonStyle {
-        case plain
-        case tinted
-        case gray
-        case filled
-        case borderless
-        case bordered
-        case borderedTinted
-        case borderedProminent
-    }
-    
-    
-    public init(_ style: ButtonStyle) {
-        switch style {
-        case .plain:
-            button.configuration = UIButton.Configuration.plain()
-        case .tinted:
-            button.configuration = UIButton.Configuration.tinted()
-        case .gray:
-            button.configuration = UIButton.Configuration.gray()
-        case .filled:
-            button.configuration = UIButton.Configuration.filled()
-        case .borderless:
-            button.configuration = UIButton.Configuration.borderless()
-        case .bordered:
-            button.configuration = UIButton.Configuration.bordered()
-        case .borderedTinted:
-            button.configuration = UIButton.Configuration.borderedTinted()
-        case .borderedProminent:
-            button.configuration = UIButton.Configuration.borderedProminent()
-        }
-    }
-    
-    /// This method must be used at the end of the syntax.
-    /// - Returns: UIButton
-    public func makeButton() -> UIButton {
-        return button
-    }
     /// Set the button's background color with Highlight Color enabled.
     /// - Parameter color: The background color to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func baseBackgroundColor(_ color: UIColor) -> Self {
-        button.configuration?.baseBackgroundColor = color
+        self.configuration?.baseBackgroundColor = color
         return self
     }
     
@@ -61,7 +22,7 @@ public struct ButtonBuilder {
     /// - Parameter color: The foreground color to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func baseForegroundColor(_ color: UIColor) -> Self {
-        button.configuration?.baseForegroundColor = color
+        self.configuration?.baseForegroundColor = color
         return self
     }
     
@@ -70,7 +31,7 @@ public struct ButtonBuilder {
     /// - Parameter text: The title text to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func title(_ text: String) -> Self {
-        button.configuration?.title = text
+        self.configuration?.title = text
         return self
     }
     
@@ -79,7 +40,7 @@ public struct ButtonBuilder {
     /// - Parameter state: The state to which the title should be applied.
     /// - Returns: The `Self` instance for function chaining.
     public func title(_ text: String, for state: UIControl.State) -> Self {
-        button.setTitle(text, for: state)
+        self.setTitle(text, for: state)
         return self
     }
     
@@ -92,7 +53,7 @@ public struct ButtonBuilder {
     public func titleWithFont(title: String, size: CGFloat, weight: UIFont.Weight) -> Self {
         var titleAttr = AttributedString(title)
         titleAttr.font = .systemFont(ofSize: size, weight: weight)
-        button.configuration?.attributedTitle = titleAttr
+        self.configuration?.attributedTitle = titleAttr
         return self
     }
     
@@ -100,7 +61,7 @@ public struct ButtonBuilder {
     /// - Parameter alignment: The alignment to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func titleAlignment(_ alignment: UIButton.Configuration.TitleAlignment) -> Self {
-        button.configuration?.titleAlignment = alignment
+        self.configuration?.titleAlignment = alignment
         return self
     }
     
@@ -109,7 +70,7 @@ public struct ButtonBuilder {
     /// - Parameter padding: The padding to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func titlePadding(_ padding: CGFloat) -> Self {
-        button.configuration?.titlePadding = padding
+        self.configuration?.titlePadding = padding
         return self
     }
     
@@ -117,7 +78,7 @@ public struct ButtonBuilder {
     /// - Parameter text: The subtitle text to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func subtitle(_ text: String) -> Self {
-        button.configuration?.subtitle = text
+        self.configuration?.subtitle = text
         return self
     }
     
@@ -130,7 +91,7 @@ public struct ButtonBuilder {
     public func subtitleWithFont(title: String, size: CGFloat, weight: UIFont.Weight) -> Self {
         var titleAttr = AttributedString(title)
         titleAttr.font = .systemFont(ofSize: size, weight: weight)
-        button.configuration?.attributedSubtitle = titleAttr
+        self.configuration?.attributedSubtitle = titleAttr
         return self
     }
     
@@ -138,7 +99,7 @@ public struct ButtonBuilder {
     /// - Parameter image: The image to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func image(_ image: UIImage?) -> Self {
-        button.configuration?.image = image
+        self.configuration?.image = image
         return self
     }
     
@@ -146,7 +107,7 @@ public struct ButtonBuilder {
     /// - Parameter cornerStyle: The corner style to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func cornerStyle(_ cornerStyle: UIButton.Configuration.CornerStyle) -> Self {
-        button.configuration?.cornerStyle = cornerStyle
+        self.configuration?.cornerStyle = cornerStyle
         return self
     }
     
@@ -154,7 +115,7 @@ public struct ButtonBuilder {
     /// - Parameter color: The color to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func borderColor(_ color: UIColor) -> Self {
-        button.configuration?.background.strokeColor = color
+        self.configuration?.background.strokeColor = color
         return self
     }
     
@@ -162,7 +123,7 @@ public struct ButtonBuilder {
     /// - Parameter width: The width to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func borderWidth(_ width: CGFloat) -> Self {
-        button.configuration?.background.strokeWidth = width
+        self.configuration?.background.strokeWidth = width
         return self
     }
     
@@ -170,7 +131,7 @@ public struct ButtonBuilder {
     /// - Parameter radius: The radius to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func cornerRadius(_ radius: CGFloat) -> Self {
-        button.configuration?.background.cornerRadius = radius
+        self.configuration?.background.cornerRadius = radius
         return self
     }
     
@@ -178,7 +139,7 @@ public struct ButtonBuilder {
     /// - Parameter padding: The padding to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func imagePadding(_ padding: CGFloat) -> Self {
-        button.configuration?.imagePadding = padding
+        self.configuration?.imagePadding = padding
         return self
     }
     
@@ -186,7 +147,7 @@ public struct ButtonBuilder {
     /// - Parameter placement: The placement to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func imagePlacement(_ placement: NSDirectionalRectEdge) -> Self {
-        button.configuration?.imagePlacement = placement
+        self.configuration?.imagePlacement = placement
         return self
     }
     
@@ -194,7 +155,7 @@ public struct ButtonBuilder {
     /// - Parameter insets: The insets to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func contentInsets(_ insets: NSDirectionalEdgeInsets) -> Self {
-        button.configuration?.contentInsets = insets
+        self.configuration?.contentInsets = insets
         return self
     }
     
@@ -202,7 +163,7 @@ public struct ButtonBuilder {
     /// - Parameter size: The size to be set.
     /// - Returns: The `Self` instance for function chaining.
     public func buttonSize(_ size: UIButton.Configuration.Size) -> Self {
-        button.configuration?.buttonSize = size
+        self.configuration?.buttonSize = size
         return self
     }
     
@@ -210,22 +171,7 @@ public struct ButtonBuilder {
     /// - Parameter bool: `true` if the button should show an activity indicator, `false` otherwise.
     /// - Returns: The `Self` instance for function chaining.
     public func showsActivityIndicator(_ bool: Bool) -> Self {
-        button.configuration?.showsActivityIndicator = bool
-        return self
-    }
-    
-    /// Add a closure to the button for a given event.
-    /// - Parameters:
-    /// - action: The closure to be added.
-    /// - event: The event for which the closure should be executed.
-    /// - Returns: The `Self` instance for function chaining.
-    public func addAction(_ action: @escaping (() -> ()), for event: UIControl.Event = .touchUpInside) -> Self {
-        let identifier = UIAction.Identifier(String(describing: event.rawValue))
-        let action = UIAction(identifier: identifier) { _ in
-            action()
-        }
-        button.removeAction(identifiedBy: identifier, for: event)
-        button.addAction(action, for: event)
+        self.configuration?.showsActivityIndicator = bool
         return self
     }
     
@@ -233,7 +179,7 @@ public struct ButtonBuilder {
     /// - Parameter action: The configuration update handler to be added.
     /// - Returns: The `Self` instance for function chaining.
     public func addConfigurationUpdateHandler(_ action: @escaping UIButton.ConfigurationUpdateHandler) -> Self {
-        button.configurationUpdateHandler = action
+        self.configurationUpdateHandler = action
         return self
     }
 }
