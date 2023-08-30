@@ -1,5 +1,5 @@
 //
-//  UILabel+Stylable.swift
+//  Stylable+UILabel.swift
 //  Photogram
 //
 //  Created by 정준영 on 2023/08/28.
