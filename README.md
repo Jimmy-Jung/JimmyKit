@@ -32,16 +32,10 @@ CocoaPod도 배워서 조만간 배포해 보겠습니다...
 
 In UIKit, buttons are typically created using the following method:
 
-ButtonBuilder must return a UIButton by calling 
-
-the makeButton() since its return type is ButtonBuilder. 
-
 <br/>
 
 UIKit에서는 일반적으로 다음과 같은 방법으로 버튼을 생성합니다. (토나옵니다 진짜)
 
-ButtinBuilder는 반환타입이 ButtonBuilder이기 때문에 꼭 makeButton()
-메서드를 호출해 UIButton을 반환해줘야 합니다.
 
 ```swift
 lazy var button1: UIButton = {
@@ -64,7 +58,17 @@ lazy var button1: UIButton = {
 
 However, with JimmyKit, you can create a button like this:
 
+ButtonBuilder must return a UIButton by calling 
+
+the makeButton() since its return type is ButtonBuilder. 
+
+<br/>
+
 하지만 JimmyKit을 사용하면 다음과 같이 만들 수 있습니다. (너무 멋지죠?!)
+
+ButtinBuilder는 반환타입이 ButtonBuilder이기 때문에 꼭 makeButton()
+
+메서드를 호출해 UIButton을 반환해줘야 합니다.
 
 
 ```swift
