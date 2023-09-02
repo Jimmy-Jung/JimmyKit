@@ -8,7 +8,7 @@
 import UIKit.UIImage
 
 @available(iOS 13.0, *)
-extension UIImage {
+public extension UIImage {
     
     typealias SFConfig = UIImage.SymbolConfiguration
     

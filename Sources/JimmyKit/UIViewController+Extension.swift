@@ -7,7 +7,7 @@
 
 import UIKit.UIViewController
 
-extension UIViewController {
+public extension UIViewController {
     
     enum TransitionStyle {
         /// Present without navigation
