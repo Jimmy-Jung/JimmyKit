@@ -23,6 +23,7 @@ public extension UIImage {
     /// Resize image with specified point size.
     /// - Parameter size: The point size to resize the image to.
     /// - Returns: The `UIImage` instance for function chaining.
+    @discardableResult
     func pointSize(_ size: CGFloat) -> UIImage {
         if let image = self.applyingSymbolConfiguration(SFConfig(pointSize: size)) {
             return image
@@ -34,6 +35,7 @@ public extension UIImage {
     /// Resize image with specified font.
     /// - Parameter font: The font to resize the image to.
     /// - Returns: The `UIImage` instance for function chaining.
+    @discardableResult
     func font(_ font: UIFont) -> UIImage {
         if let image = self.applyingSymbolConfiguration(SFConfig(font: font)) {
             return image
@@ -45,6 +47,7 @@ public extension UIImage {
     /// Resize image with specified text style.
     /// - Parameter style: The text style to resize the image to.
     /// - Returns: The `UIImage` instance for function chaining.
+    @discardableResult
     func textStyle(_ style: UIFont.TextStyle) -> UIImage {
         if let image = self.applyingSymbolConfiguration(SFConfig(textStyle: style)) {
             return image
@@ -56,6 +59,7 @@ public extension UIImage {
     /// Resize image with specified symbol weight.
     /// - Parameter weight: The symbol weight to resize the image to.
     /// - Returns: The `UIImage` instance for function chaining.
+    @discardableResult
     func weight(_ weight: UIImage.SymbolWeight) -> UIImage {
         if let image = self.applyingSymbolConfiguration(SFConfig(weight: weight)) {
             return image
@@ -67,6 +71,7 @@ public extension UIImage {
     /// Resize image with specified symbol scale.
     /// - Parameter scale: The symbol scale to resize the image to.
     /// - Returns: The `UIImage` instance for function chaining.
+    @discardableResult
     func scale(_ scale: UIImage.SymbolScale) -> UIImage {
         if let image = self.applyingSymbolConfiguration(SFConfig(scale: scale)) {
             return image
@@ -80,6 +85,7 @@ public extension UIImage {
     /// - Parameter config: The image rendering option to apply.
     /// - Returns: The `UIImage` instance for function chaining.
     @available(iOS 15.0, *)
+    @discardableResult
     func renderingColor(_ config: Rendering) -> UIImage {
         switch config {
         case .monochrome:
