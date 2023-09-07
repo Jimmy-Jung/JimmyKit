@@ -10,6 +10,28 @@ import UIKit.UIButton
 @available(iOS 15.0, *)
 extension Stylable where Self: UIButton {
     
+    init(_ style: ButtonStyle) {
+        self.init()
+        switch style {
+        case .plain:
+            self.configuration = .plain()
+        case .tinted:
+            self.configuration = .tinted()
+        case .gray:
+            self.configuration = .gray()
+        case .filled:
+            self.configuration = .filled()
+        case .borderless:
+            self.configuration = .borderless()
+        case .bordered:
+            self.configuration = .bordered()
+        case .borderedTinted:
+            self.configuration = .borderedTinted()
+        case .borderedProminent:
+            self.configuration = .borderedProminent()
+        }
+    }
+    
     /// Set the button's background color with Highlight Color enabled.
     /// - Parameter color: The background color to be set.
     /// - Returns: The `Self` instance for function chaining.
