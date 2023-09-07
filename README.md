@@ -1,3 +1,4 @@
+[![Hits](https://hits.sh/github.com/Jimmy-Jung/JimmyKit.svg?view=today-total&label=visited&logo=base64)](https://hits.sh/github.com/Jimmy-Jung/JimmyKit/)
 # JimmyKit
 
 ✨ JimmyKit is a stylish swift tool that allows you to easily create UIKit Components with various styles and settings.
