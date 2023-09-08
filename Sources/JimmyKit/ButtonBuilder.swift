@@ -74,15 +74,6 @@ public struct ButtonBuilder {
         return self
     }
     
-    /// Set the button's title.
-    /// - Parameter text: The title text to be set.
-    /// - Parameter state: The state to which the title should be applied.
-    /// - Returns: The `Self` instance for function chaining.
-    public func title(_ text: String, for state: UIControl.State) -> Self {
-        button.setTitle(text, for: state)
-        return self
-    }
-    
     /// Set the button's title with font attributes.
     /// - Parameters:
     ///   - title: The title text to be set.
