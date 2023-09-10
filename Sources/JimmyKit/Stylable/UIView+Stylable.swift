@@ -77,4 +77,15 @@ extension Stylable where Self: UIView {
         self.addSubview(view)
         return self
     }
+    
+    /// Sets the border color and width for the target view
+    /// - Parameter color: The color for the border
+    /// - Parameter width: The width of the border
+    /// - Returns: The modified view with the border
+    @discardableResult
+    public func setBorder(color: UIColor, width: CGFloat) -> Self {
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = width
+        return self
+    }
 }
