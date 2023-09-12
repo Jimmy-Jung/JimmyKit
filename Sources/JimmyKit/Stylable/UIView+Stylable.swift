@@ -9,6 +9,8 @@ import UIKit.UIView
 
 public protocol Stylable {}
 
+extension UIView: Stylable {}
+
 extension Stylable where Self: UIView {
     
     /// Set the corner radius of the view.
