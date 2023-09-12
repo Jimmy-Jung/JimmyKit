@@ -84,7 +84,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter size: The desired minimum font size for the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func minimumFontSize(_ size: CGFloat) -> Self {
+    public func minimumFontSize(_ size: CGFloat) -> Self {
         self.minimumFontSize = size
         return self
     }
@@ -111,7 +111,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter type: The desired spell checking type for the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func spellCheckingType(_ type: UITextSpellCheckingType) -> Self {
+    public func spellCheckingType(_ type: UITextSpellCheckingType) -> Self {
         self.spellCheckingType = type
         return self
     }
@@ -129,7 +129,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter appearance: The desired keyboard appearance for the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func keyboardAppearance(_ appearance: UIKeyboardAppearance) -> Self {
+    public func keyboardAppearance(_ appearance: UIKeyboardAppearance) -> Self {
         self.keyboardAppearance = appearance
         return self
     }
@@ -197,7 +197,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter view: The view to be displayed on the left side of the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func leftView(_ view: UIView?) -> Self {
+    public func leftView(_ view: UIView?) -> Self {
         self.leftView = view
         return self
     }
@@ -206,7 +206,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter mode: The mode for displaying the left view of the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func leftViewMode(_ mode: UITextField.ViewMode) -> Self {
+    public func leftViewMode(_ mode: UITextField.ViewMode) -> Self {
         self.leftViewMode = mode
         return self
     }
@@ -215,7 +215,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter view: The view to be displayed on the right side of the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func rightView(_ view: UIView?) -> Self {
+    public func rightView(_ view: UIView?) -> Self {
         self.rightView = view
         return self
     }
@@ -224,7 +224,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter mode: The mode for displaying the right view of the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func rightViewMode(_ mode: UITextField.ViewMode) -> Self {
+    public func rightViewMode(_ mode: UITextField.ViewMode) -> Self {
         self.rightViewMode = mode
         return self
     }
@@ -233,7 +233,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter view: The input view for the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func inputView(_ view: UIView?) -> Self {
+    public func inputView(_ view: UIView?) -> Self {
         self.inputView = view
         return self
     }
@@ -242,7 +242,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter view: The input accessory view for the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    func inputAccessoryView(_ view: UIView?) -> Self {
+    public func inputAccessoryView(_ view: UIView?) -> Self {
         self.inputAccessoryView = view
         return self
     }
