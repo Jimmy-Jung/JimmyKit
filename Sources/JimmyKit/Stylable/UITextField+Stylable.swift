@@ -48,7 +48,7 @@ extension Stylable where Self: UITextField {
     /// - Parameter type: The desired autocapitalization type for the text field.
     /// - Returns: The modified text field.
     @discardableResult
-    public func capitalizationType(_ type: UITextAutocapitalizationType) -> Self {
+    public func autocapitalizationType(_ type: UITextAutocapitalizationType) -> Self {
         self.autocapitalizationType = type
         return self
     }
