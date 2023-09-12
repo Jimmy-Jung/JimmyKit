@@ -10,7 +10,7 @@ import UIKit.UIView
 public protocol Stylable {}
 
 extension UIView: Stylable {
-     enum ButtonStyle {
+     public enum ButtonStyle {
         case plain
         case tinted
         case gray

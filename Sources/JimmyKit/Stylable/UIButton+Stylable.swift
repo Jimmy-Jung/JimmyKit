@@ -10,7 +10,7 @@ import UIKit.UIButton
 @available(iOS 15.0, *)
 extension Stylable where Self: UIButton {
     
-    init(_ style: ButtonStyle) {
+    public init(_ style: ButtonStyle) {
         self.init()
         switch style {
         case .plain:
