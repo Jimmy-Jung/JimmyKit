@@ -9,19 +9,6 @@ import UIKit.UIView
 
 public protocol Stylable {}
 
-extension UIView: Stylable {
-     public enum ButtonStyle {
-        case plain
-        case tinted
-        case gray
-        case filled
-        case borderless
-        case bordered
-        case borderedTinted
-        case borderedProminent
-    }
-}
-
 extension Stylable where Self: UIView {
     
     /// Set the corner radius of the view.
