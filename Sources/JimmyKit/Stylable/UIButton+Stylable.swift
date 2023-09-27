@@ -103,6 +103,17 @@ extension Stylable where Self: UIButton {
         return self
     }
     
+    /// Set the button's image with state.
+    /// - Parameters:
+    ///   - image: The image to be set.
+    ///   - state: The state of a control.
+    /// - Returns: The `Self` instance for function chaining.
+    @discardableResult
+    public func setImage(_ image: UIImage?, for state: UIControl.State) -> Self {
+        self.setImage(image, for: state)
+        return self
+    }
+    
     /// Set the button's corner style.
     /// - Parameter cornerStyle: The corner style to be set.
     /// - Returns: The `Self` instance for function chaining.
