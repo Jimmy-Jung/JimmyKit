@@ -52,6 +52,20 @@ extension Stylable where Self: UIButton {
         return self
     }
     
+    /// Set the button's title with font attributes.
+    /// - Parameters:
+    ///   - title: The title text to be set.
+    ///   - size: The size of the font to be set.
+    ///   - weight: The weight of the font to be set.
+    /// - Returns: The `Self` instance for function chaining.
+    @discardableResult
+    public func titleWithFont(title: String, font: UIFont) -> Self {
+        var titleAttr = AttributedString(title)
+        titleAttr.font = font
+        self.configuration?.attributedTitle = titleAttr
+        return self
+    }
+    
     /// Set the alignment of the button's title.
     /// - Parameter alignment: The alignment to be set.
     /// - Returns: The `Self` instance for function chaining.
