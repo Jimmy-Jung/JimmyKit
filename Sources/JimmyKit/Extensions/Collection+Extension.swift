@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Collection {
+public extension Collection {
     // An extension that adds a subscript to Collection
     subscript(safe index: Index) -> Element? {
         // Returns nil if the index is out of range of Collection
