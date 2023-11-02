@@ -111,7 +111,7 @@ However, if you don't like this approach, UIButton also provides chaining method
 
 ```swift
 
-let button = UIButton()
+let button = UIButton().builder
     .title("Plain Button")
     .subtitle("SubTitle")
     .buttonSize(.medium)
@@ -119,28 +119,33 @@ let button = UIButton()
     .addAction { [unowned self] in
         print("Button Tapped")
     }
+    .build()
 
-let textField = UITextField()
+let textField = UITextField().builder
     .text("Enter your name")
     .textColor(.black)
     .font(UIFont.systemFont(ofSize: 16))
     .placeholder("Name")
+    .build()
 
-let view = UIView()
+let view = UIView().builder
     .backgroundColor(.red)
     .cornerRadius(8)
     .clipsToBounds(true)
     .addSubView(textField)
+    .build()
     
-let segmentedControl = UISegmentedControl(items: ["One", "Two"])
+let segmentedControl = UISegmentedControl(items: ["One", "Two"]).builder
     .backgroundColor(.red)
     .clipsToBounds(true)
     .cornerRadius(20)
+    .build()
     
-let scrollView = UIScrollView()
+let scrollView = UIScrollView().builder
     .backgroundColor(.red)
     .clipsToBounds(true)
     .cornerRadius(20)
+    .build()
 
 ```
 
