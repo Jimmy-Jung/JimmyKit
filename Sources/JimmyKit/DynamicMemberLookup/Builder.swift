@@ -34,6 +34,7 @@ public protocol BuilderProtocol {
     var builder: Builder<BuilderObject> { get set }
 }
 extension BuilderProtocol where Self: AnyObject {
+    @inlinable
     public var builder: Builder<Self> {
         get { Builder(self) }
         set {}
