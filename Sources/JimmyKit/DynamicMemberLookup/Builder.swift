@@ -9,7 +9,7 @@ import UIKit
 
 @dynamicMemberLookup
 public struct Builder<BaseObject: AnyObject> {
-    private let _build: () -> BaseObject
+    internal let _build: () -> BaseObject
     public init(_ build: @escaping () -> BaseObject) {
         self._build = build
     }
@@ -41,3 +41,5 @@ extension BuilderProtocol where Self: AnyObject {
     }
 }
 extension NSObject: BuilderProtocol {}
+
+
