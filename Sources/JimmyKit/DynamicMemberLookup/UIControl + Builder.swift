@@ -10,7 +10,7 @@ import UIKit
 extension Builder where BaseObject: UIControl {
     
     @available(iOS 14.0, *)
-    var addAction: (@escaping () -> (), UIControl.Event) -> Self {
+    public var addAction: (_ action: @escaping () -> (), _ event: UIControl.Event) -> Self {
         { [build = _build] _action, event in
             let identifier = UIAction.Identifier(String(describing: event.rawValue))
             let action = UIAction(identifier: identifier) { _ in
