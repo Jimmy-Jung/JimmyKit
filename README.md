@@ -5,6 +5,7 @@
 
 ✨ JimmyKit은 Swifty하게 UIKit 컴포넌트를 만들 수 있는 툴입니다.
 
+[[개발 과정 블로그 링크]](https://jimmy-ios.tistory.com/42/)
 <br/>
 
 # Installation
