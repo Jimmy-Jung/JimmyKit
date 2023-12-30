@@ -10,6 +10,12 @@ import UIKit.UIButton
 @available(iOS 15.0, *)
 extension Stylable where Self: UIButton {
     
+    @discardableResult
+    public func tag(_ value: Int) -> Self {
+        self.tag = value
+        return self
+    }
+    
     /// Set the button's background color with Highlight Color enabled.
     /// - Parameter color: The background color to be set.
     /// - Returns: The `Self` instance for function chaining.

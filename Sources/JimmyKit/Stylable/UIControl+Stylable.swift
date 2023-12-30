@@ -25,6 +25,19 @@ extension Stylable where Self: UIControl {
         return self
     }
     
+    @available(iOS 14.0, *)
+    @discardableResult
+    public func addAction(_ action: @escaping ((Self) -> ()), for event: UIControl.Event = .touchUpInside) -> Self {
+        let identifier = UIAction.Identifier(String(describing: event.rawValue))
+        let action = UIAction(identifier: identifier) { [weak self] _ in
+            guard let self else { return }
+            action(self)
+        }
+        self.removeAction(identifiedBy: identifier, for: event)
+        self.addAction(action, for: event)
+        return self
+    }
+    
     /// Set whether the control is enabled.
     /// - Parameter bool: `true` if the control should be enabled, `false` otherwise.
     /// - Returns: The `Self` instance for function chaining.
