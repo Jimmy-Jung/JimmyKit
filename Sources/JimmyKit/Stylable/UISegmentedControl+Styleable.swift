@@ -17,6 +17,12 @@ extension Stylable where Self: UISegmentedControl {
     }
     
     @discardableResult
+    public func selectedSegmentIndex(_ selectedSegmentIndex: Int) -> Self {
+        self.selectedSegmentIndex = selectedSegmentIndex
+        return self
+    }
+    
+    @discardableResult
     public func imageForSegment(at segment: Int) -> Self {
         self.imageForSegment(at: segment)
         return self
