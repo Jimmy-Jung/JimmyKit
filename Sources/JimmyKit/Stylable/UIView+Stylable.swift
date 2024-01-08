@@ -22,6 +22,12 @@ extension Stylable where Self: UIView {
         return self
     }
     
+    @discardableResult
+    public func isUserInteractionEnabled(_ bool: Bool) -> Self {
+        self.isUserInteractionEnabled = bool
+        return self
+    }
+    
     /// Set the background color of the view.
     /// - Parameter color: The desired background color for the view.
     /// - Returns: The modified view.
